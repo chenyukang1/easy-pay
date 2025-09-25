@@ -9,7 +9,6 @@
         <version>${revision}</version>
     </parent>
 
-    <groupId>com.cyk.easy.pay.domain</groupId>
     <artifactId>easy-pay-domain</artifactId>
 
     <properties>
@@ -17,5 +16,13 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.cyk.easy.pay</groupId>
+            <artifactId>easy-pay-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

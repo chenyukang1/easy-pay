@@ -15,6 +15,7 @@
         <module>easy-pay-infrastructure</module>
         <module>easy-pay-domain</module>
         <module>easy-pay-starter</module>
+        <module>easy-pay-interface</module>
     </modules>
 
     <properties>
