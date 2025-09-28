@@ -10,12 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>easy-pay-common</module>
+        <module>easy-pay-shared</module>
         <module>easy-pay-dependencies-bom</module>
-        <module>easy-pay-infrastructure</module>
-        <module>easy-pay-domain</module>
-        <module>easy-pay-starter</module>
-        <module>easy-pay-interface</module>
+        <module>easy-pay-merchant</module>
+        <module>easy-pay-routing</module>
     </modules>
 
     <properties>
