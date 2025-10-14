@@ -7,7 +7,7 @@ import com.cyk.easy.pay.routing.api.model.TradePayRequest;
 /**
  * @author yukang.chen
  */
-public interface PayRoutingService {
+public interface PaymentRoutingService {
 
     RouteStrategy route(TradePayRequest tradePayRequest);
 }

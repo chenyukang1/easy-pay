@@ -1,18 +1,21 @@
 package com.cyk.easy.pay.routing.domain.channel.repository;
 
+import com.cyk.easy.pay.routing.domain.channel.model.entity.PaymentChannelEntity;
 
-import com.cyk.easy.pay.routing.domain.channel.model.aggregate.PaymentChannel;
+import java.util.List;
 
 /**
  * @author yukang.chen
  */
 public interface IPaymentChannelRepository {
 
-    PaymentChannel getPaymentChannel(String channelCode);
+    PaymentChannelEntity getPaymentChannel(Long channelId);
 
-    void addPaymentChannel(PaymentChannel paymentChannel);
+    List<PaymentChannelEntity> getPaymentChannels(List<Long> channelIds);
 
-    void updatePaymentChannel(PaymentChannel paymentChannel);
+    void addPaymentChannel(PaymentChannelEntity entity);
 
-    void deletePaymentChannel(String channelCode);
+    void updatePaymentChannel(PaymentChannelEntity entity);
+
+    void deletePaymentChannel(Long channelId);
 }

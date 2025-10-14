@@ -1,0 +1,6 @@
+rule "HighAmountUseUnionPay"
+when
+    $ctx: TransactionContext(amount > 10000)
+then
+    insert(new CandidateChannel("UNIONPAY", 1, 100));
+end

@@ -1,0 +1,31 @@
+import com.cyk.easy.pay.routing.domain.channel.model.valobj.TransactionContext;
+import com.cyk.easy.pay.routing.domain.rule.model.valobj.RuleMatchResult;
+import com.cyk.easy.pay.common.enums.PayScene;
+import com.cyk.easy.pay.common.valobj.Money;
+import java.util.Currency;
+
+rule "大额交易银联APP"
+    salience 100
+when
+  $ctx: TransactionContext(
+        money.greaterThan(Money.of(10000, Currency.getInstance("CNY"))),
+        scene == PayScene.H5,
+        merchantInfo.payWayList.contains("UP_WAP")
+  )
+  $result: RuleMatchResult()
+then
+  $result.addCandidatePayWay("UP_WAP");
+end
+
+rule "大额交易银联APP"
+    salience 95
+when
+  $ctx: TransactionContext(
+        money.greaterThan(Money.of(10000, Currency.getInstance("CNY"))),
+        scene == PayScene.APP,
+        merchantInfo.payWayList.contains("UP_APP")
+  )
+  $result: RuleMatchResult()
+then
+  $result.addCandidatePayWay("UP_APP");
+end

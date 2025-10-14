@@ -1,6 +1,8 @@
 package com.cyk.easy.pay.routing.domain.channel.model.valobj;
 
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * @author yukang.chen
  */
