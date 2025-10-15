@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.cyk.easy.pay</groupId>
+        <artifactId>easy-pay</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>easy-pay-caisher</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>easy-pay-caisher-api</module>
+        <module>easy-pay-caisher-application</module>
+        <module>easy-pay-caisher-domain</module>
+        <module>easy-pay-caisher-infrastructure</module>
+        <module>easy-pay-caisher-interfaces</module>
+        <module>easy-pay-caisher-starter</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.cyk.easy.pay</groupId>
+            <artifactId>easy-pay-shared</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
