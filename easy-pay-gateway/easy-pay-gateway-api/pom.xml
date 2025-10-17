@@ -5,18 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.cyk.easy.pay</groupId>
-        <artifactId>easy-pay</artifactId>
+        <artifactId>easy-pay-gateway</artifactId>
         <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>easy-pay-merchant</artifactId>
-    <packaging>pom</packaging>
-    <description>商户中心</description>
-
-    <modules>
-        <module>easy-pay-merchant-api</module>
-        <module>easy-pay-merchant-starter</module>
-    </modules>
+    <artifactId>easy-pay-gateway-api</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -26,9 +20,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.cyk.easy.pay</groupId>
-            <artifactId>easy-pay-shared</artifactId>
-            <version>${project.version}</version>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
     </dependencies>
 

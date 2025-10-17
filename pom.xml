@@ -13,7 +13,7 @@
         <module>easy-pay-shared</module>
         <module>easy-pay-dependencies-bom</module>
         <module>easy-pay-merchant</module>
-        <module>easy-pay-routing</module>
+        <module>easy-pay-gateway</module>
         <module>easy-pay-caisher</module>
     </modules>
 

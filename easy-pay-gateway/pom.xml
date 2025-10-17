@@ -9,13 +9,17 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>easy-pay-merchant</artifactId>
+    <artifactId>easy-pay-gateway</artifactId>
     <packaging>pom</packaging>
-    <description>商户中心</description>
+    <description>渠道网关</description>
 
     <modules>
-        <module>easy-pay-merchant-api</module>
-        <module>easy-pay-merchant-starter</module>
+        <module>easy-pay-gateway-api</module>
+        <module>easy-pay-gateway-application</module>
+        <module>easy-pay-gateway-domain</module>
+        <module>easy-pay-gateway-infrastructure</module>
+        <module>easy-pay-gateway-interfaces</module>
+        <module>easy-pay-gateway-starter</module>
     </modules>
 
     <properties>
