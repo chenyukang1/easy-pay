@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @author yukang.chen
  */
-public class UnifiedPayRes implements Serializable {
+public class UnifiedPayResp implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 703932154444509814L;

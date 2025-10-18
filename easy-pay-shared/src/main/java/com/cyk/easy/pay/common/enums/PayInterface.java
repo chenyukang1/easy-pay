@@ -2,11 +2,11 @@ package com.cyk.easy.pay.common.enums;
 
 
 /**
- * 支付方式
+ * 支付接口
  *
  * @author yukang.chen
  */
-public enum PayMethod {
+public enum PayInterface {
 
     WXPAY,
 

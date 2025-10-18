@@ -54,8 +54,8 @@ CREATE TABLE `t_pay_interface_config`
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='支付接口配置参数表';
 
 -- 商户支付通道表 (允许商户 支付方式 对应多个支付接口的配置)
-DROP TABLE IF EXISTS t_mch_pay_passage;
-CREATE TABLE `t_mch_pay_passage`
+DROP TABLE IF EXISTS t_mch_pay_channel;
+CREATE TABLE `t_mch_pay_channel`
 (
     `id`          BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT 'ID',
     `mch_no`      VARCHAR(64)    NOT NULL COMMENT '商户号',

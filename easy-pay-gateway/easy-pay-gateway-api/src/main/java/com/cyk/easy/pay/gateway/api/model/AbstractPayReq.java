@@ -13,7 +13,6 @@ public abstract class AbstractPayReq implements Serializable {
     @Serial
     private static final long serialVersionUID = 1493248376218573234L;
 
-
     /** 商户号 **/
     @NotBlank(message="商户号不能为空")
     private String mchNo;

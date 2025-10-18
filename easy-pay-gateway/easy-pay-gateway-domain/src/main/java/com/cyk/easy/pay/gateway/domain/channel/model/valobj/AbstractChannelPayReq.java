@@ -1,59 +1,53 @@
-package com.cyk.easy.pay.gateway.api.model;
+package com.cyk.easy.pay.gateway.domain.channel.model.valobj;
 
 
 import com.cyk.easy.pay.common.valobj.Money;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import org.hibernate.validator.constraints.Range;
-
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import java.io.Serial;
 
 /**
  * @author yukang.chen
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class UnifiedPayReq extends AbstractPayReq {
+public abstract class AbstractChannelPayReq {
 
-    @Serial
-    private static final long serialVersionUID = -9223239991852312175L;
+    /**
+     * 商户号
+     **/
+    private String mchNo;
+
+    /**
+     * 商户应用ID
+     **/
+    private String appId;
 
     /**
      * 商户订单号
      **/
-    @NotBlank(message = "商户订单号不能为空")
     private String mchOrderNo;
 
     /**
      * 支付订单号
      **/
-    @NotBlank(message = "支付订单号不能为空")
     private String payOrderNo;
 
     /**
      * 支付方式  如： wxpay_jsapi,alipay_wap等
      **/
-    @NotNull(message = "支付方式不能为空")
     private String wayCode;
 
     /**
      * 金额
      **/
-    @NotNull(message = "金额不能为空")
     private Money money;
 
     /**
      * 商品标题
      **/
-    @NotBlank(message = "商品标题不能为空")
     private String subject;
 
     /**
      * 商品描述信息
      **/
-    @NotBlank(message = "商品描述信息不能为空")
     private String body;
 
     /**
@@ -69,7 +63,7 @@ public class UnifiedPayReq extends AbstractPayReq {
     /**
      * 订单失效时间, 单位：秒
      **/
-    private Integer expiredTime;
+    private Long expiredTime;
 
     /**
      * 特定渠道发起额外参数
@@ -84,6 +78,6 @@ public class UnifiedPayReq extends AbstractPayReq {
     /**
      * 分账模式： 0-该笔订单不允许分账, 1-支付成功按配置自动完成分账, 2-商户手动分账(解冻商户金额)
      **/
-    @Range(min = 0, max = 2, message = "分账模式设置值有误")
     private Byte divisionMode;
+
 }

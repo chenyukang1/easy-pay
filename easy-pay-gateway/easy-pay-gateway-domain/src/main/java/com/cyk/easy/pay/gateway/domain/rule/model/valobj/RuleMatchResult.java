@@ -1,6 +1,6 @@
 package com.cyk.easy.pay.gateway.domain.rule.model.valobj;
 
-import com.cyk.easy.pay.common.enums.PayMethod;
+import com.cyk.easy.pay.common.enums.PayInterface;
 import lombok.Data;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class RuleMatchResult {
 
-    private List<PayMethod> candidatePayMethods;
+    private List<PayInterface> candidatePayInterfaces;
 
     public void addCandidatePayWay(String payWay) {
         this.candidateChannels.add(channelCode);
