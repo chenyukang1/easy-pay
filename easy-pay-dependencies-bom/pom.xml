@@ -15,10 +15,14 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>2.7.11</spring-boot.version>
+        <redisson.version>3.16.1</redisson.version>
         <google-rpc.version>1.58.0</google-rpc.version>
         <protobuf.version>3.23.4</protobuf.version>
         <apache-dubbo.version>2.7.10</apache-dubbo.version>
+        <alipay-sdk.version>4.38.61.ALL</alipay-sdk.version>
         <drools.version>9.44.0.Final</drools.version>
+        <hutool.version>5.8.26</hutool.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
         <fastjson.version>2.0.28</fastjson.version>
         <mybatis-plus.version>3.3.0</mybatis-plus.version>
         <velocity-engine.version>2.3</velocity-engine.version>
@@ -35,6 +39,12 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
 
             <dependency>
@@ -64,7 +74,7 @@
             <dependency>
                 <groupId>com.alipay.sdk</groupId>
                 <artifactId>alipay-sdk-java</artifactId>
-                <version>4.38.61.ALL</version>
+                <version>${alipay-sdk.version}</version>
             </dependency>
 
             <dependency>
@@ -77,6 +87,18 @@
                 <groupId>org.drools</groupId>
                 <artifactId>drools-decisiontables</artifactId>
                 <version>${drools.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
             <dependency>

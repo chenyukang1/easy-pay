@@ -27,6 +27,10 @@ public class R<T> {
         return r;
     }
 
+    public boolean isSuccess() {
+        return this.code == 200;
+    }
+
     public int getCode() {
         return code;
     }

@@ -6,6 +6,32 @@ package com.cyk.easy.pay.common.constants;
  */
 public class Constant {
 
+    public interface MCH_TYPE {
+
+        byte MCH_TYPE_NORMAL = 0;   // 普通商户
+
+        byte MCH_TYPE_ISVSUB = 1;   // 特邀商户
+    }
+
+    public interface ISV_INFO_SATE {
+
+        byte MCH_TYPE_NORMAL = 0;   // 普通商户
+
+        byte MCH_TYPE_ISVSUB = 1;   // 特邀商户
+    }
+
+    public interface SYS_USER {
+
+        /**
+         * 性别 1- 男， 2-女
+         */
+        byte SEX_UNKNOWN = 0;
+
+        byte SEX_MALE = 1;
+
+        byte SEX_FEMALE = 2;
+    }
+
     //接口类型
     public interface IF_CODE {
 
@@ -76,4 +102,5 @@ public class Constant {
 
         String PP_PC = "PP_PC"; // Paypal 支付
     }
+
 }

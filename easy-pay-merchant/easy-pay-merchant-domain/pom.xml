@@ -5,21 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.cyk.easy.pay</groupId>
-        <artifactId>easy-pay</artifactId>
+        <artifactId>easy-pay-merchant</artifactId>
         <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>easy-pay-merchant</artifactId>
-    <packaging>pom</packaging>
-    <description>商户中心</description>
-
-    <modules>
-        <module>easy-pay-merchant-api</module>
-        <module>easy-pay-merchant-domain</module>
-        <module>easy-pay-merchant-infrastructure</module>
-        <module>easy-pay-merchant-interfaces</module>
-        <module>easy-pay-merchant-starter</module>
-    </modules>
+    <artifactId>easy-pay-merchant-domain</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -29,9 +20,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.cyk.easy.pay</groupId>
-            <artifactId>easy-pay-shared</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 

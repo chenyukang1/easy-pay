@@ -13,12 +13,15 @@ import java.util.Map;
 public class DateUtil {
 
     public enum DatePattern {
+        DAY_DATETIME_FORMAT,
         NORM_DATETIME_FORMAT
     }
 
+    private static final DateTimeFormatter DAY_DATETIME_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
     private static final DateTimeFormatter NORM_DATETIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     private static final Map<DatePattern, DateTimeFormatter> FORMATTER_MAP = Map.of(
+            DatePattern.DAY_DATETIME_FORMAT, DAY_DATETIME_FORMATTER,
             DatePattern.NORM_DATETIME_FORMAT, NORM_DATETIME_FORMATTER
     );
 
