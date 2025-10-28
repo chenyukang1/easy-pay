@@ -2,6 +2,7 @@ package com.cyk.easy.pay.gateway.api.model;
 
 
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -9,6 +10,7 @@ import java.io.Serializable;
 /**
  * @author yukang.chen
  */
+@Data
 public class UnifiedPayResp implements Serializable {
 
     @Serial
@@ -17,25 +19,31 @@ public class UnifiedPayResp implements Serializable {
     /**
      * 支付订单号
      **/
-    private String payOrderId;
+    private String payOrderNo;
 
     /**
-     * 商户订单号
+     * 支付方式  如： wxpay_jsapi,alipay_wap等
      **/
-    private String mchOrderNo;
+    private String wayCode;
 
     /**
-     * 订单状态
+     * 支付接口  如： wxpay,alipay等
      **/
-    private Byte orderState;
+    private String ifCode;
 
     /**
-     * 支付参数类型  ( 无参数，  调起支付插件参数， 重定向到指定地址，  用户扫码   )
+     * 第三方支付平台生成的订单号（如微信支付订单号）
+     */
+    private String channelOrderNo;
+
+    /**
+     * 支付数据类型  ( 无参数，  调起支付插件参数， 重定向到指定地址，  用户扫码   )
+     * CODE_URL、FORM_HTML、APP_PARAMS、JSAPI_PARAMS
      **/
     private String payDataType;
 
     /**
-     * 支付参数
+     * 支付核心数据（二维码地址、HTML表单、调起参数JSON）
      **/
     private String payData;
 
@@ -50,7 +58,7 @@ public class UnifiedPayResp implements Serializable {
     private String errMsg;
 
     /**
-     * 上游渠道返回数据包 (无需JSON序列化)
+     * 渠道返回数据包 (无需JSON序列化)
      **/
     @JSONField(serialize = false)
     private ChannelRetMsg channelRetMsg;

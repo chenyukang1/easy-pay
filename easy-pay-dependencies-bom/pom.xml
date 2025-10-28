@@ -21,6 +21,7 @@
         <apache-dubbo.version>2.7.10</apache-dubbo.version>
         <alipay-sdk.version>4.38.61.ALL</alipay-sdk.version>
         <drools.version>9.44.0.Final</drools.version>
+        <caffeine.version>3.2.0</caffeine.version>
         <hutool.version>5.8.26</hutool.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <fastjson.version>2.0.28</fastjson.version>
@@ -87,6 +88,12 @@
                 <groupId>org.drools</groupId>
                 <artifactId>drools-decisiontables</artifactId>
                 <version>${drools.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>${caffeine.version}</version>
             </dependency>
 
             <dependency>

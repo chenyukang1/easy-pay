@@ -12,7 +12,7 @@ public abstract class AbstractChannelPayResp {
     /**
      * 商户订单号
      **/
-    private String mchOrderNo;
+//    private String mchOrderNo;
 
     /**
      * 支付订单号
@@ -43,4 +43,9 @@ public abstract class AbstractChannelPayResp {
      * 渠道返回错误信息
      **/
     private String errMsg;
+
+    /**
+     * 上游渠道返回数据包 (无需JSON序列化)
+     **/
+    private ChannelRetMsg channelRetMsg;
 }

@@ -1,7 +1,7 @@
 package com.cyk.easy.pay.merchant.api;
 
 
-import com.cyk.easy.pay.common.constants.R;
+import com.cyk.easy.pay.common.constants.ApiResponse;
 import com.cyk.easy.pay.merchant.api.model.MchAndAppInfoReq;
 import com.cyk.easy.pay.merchant.api.model.MchAndAppInfoResp;
 
@@ -10,5 +10,5 @@ import com.cyk.easy.pay.merchant.api.model.MchAndAppInfoResp;
  */
 public interface IMchApiService {
 
-    R<MchAndAppInfoResp> queryMchAndAppInfo(MchAndAppInfoReq req);
+    ApiResponse<MchAndAppInfoResp> queryMchAndAppInfo(MchAndAppInfoReq req);
 }

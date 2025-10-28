@@ -21,10 +21,16 @@ public class UnifiedPayReq extends AbstractPayReq {
     private static final long serialVersionUID = -9223239991852312175L;
 
     /**
-     * 商户订单号
+     * 商户号
      **/
-    @NotBlank(message = "商户订单号不能为空")
-    private String mchOrderNo;
+    @NotBlank(message = "商户号不能为空")
+    private String merchantId;
+
+    /**
+     * 应用号
+     **/
+    @NotBlank(message = "应用号不能为空")
+    private String applicationId;
 
     /**
      * 支付订单号
@@ -37,6 +43,12 @@ public class UnifiedPayReq extends AbstractPayReq {
      **/
     @NotNull(message = "支付方式不能为空")
     private String wayCode;
+
+    /**
+     * 支付接口  如： wxpay,alipay等
+     **/
+    @NotNull(message = "支付方式不能为空")
+    private String ifCode;
 
     /**
      * 金额

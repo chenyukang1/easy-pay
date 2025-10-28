@@ -10,14 +10,14 @@ public class Constant {
 
         byte MCH_TYPE_NORMAL = 0;   // 普通商户
 
-        byte MCH_TYPE_ISVSUB = 1;   // 特邀商户
+        byte MCH_TYPE_ISVSUB = 1;   // 特约商户
     }
 
     public interface ISV_INFO_SATE {
 
         byte MCH_TYPE_NORMAL = 0;   // 普通商户
 
-        byte MCH_TYPE_ISVSUB = 1;   // 特邀商户
+        byte MCH_TYPE_ISVSUB = 1;   // 特特约商户邀商户
     }
 
     public interface SYS_USER {
@@ -30,6 +30,17 @@ public class Constant {
         byte SEX_MALE = 1;
 
         byte SEX_FEMALE = 2;
+    }
+
+    public interface AliPay {
+
+        String PROD_SERVER_URL = "https://openapi.alipay.com/gateway.do";
+
+        String SANDBOX_SERVER_URL = "https://openapi-sandbox.dl.alipaydev.com/gateway.do";
+
+        String FORMAT_JSON = "json";
+
+        String CHARSET_UTF8 = "UTF-8";
     }
 
     //接口类型

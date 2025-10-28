@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyk.easy.pay.gateway.infrastructure.mapper.PayChannelConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cyk.easy.pay.gateway.domain.channel.model.entity.PayChannelConfigEntity">
+        <id column="id" property="id" />
+        <result column="mch_no" property="mchNo" />
+        <result column="isv_no" property="isvNo" />
+        <result column="channel_code" property="channelCode" />
+        <result column="account_type" property="accountType" />
+        <result column="mch_id" property="mchId" />
+        <result column="channel_params" property="channelParams" />
+        <result column="state" property="state" />
+        <result column="remark" property="remark" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+</mapper>

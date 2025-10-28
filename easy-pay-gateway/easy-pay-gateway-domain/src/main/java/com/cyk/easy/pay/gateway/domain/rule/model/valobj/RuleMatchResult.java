@@ -14,6 +14,6 @@ public class RuleMatchResult {
     private List<PayInterface> candidatePayInterfaces;
 
     public void addCandidatePayWay(String payWay) {
-        this.candidateChannels.add(channelCode);
+//        this.candidateChannels.add(channelCode);
     }
 }

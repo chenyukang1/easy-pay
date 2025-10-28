@@ -1,7 +1,7 @@
 package com.cyk.easy.pay.merchant.interfaces.rpc;
 
 
-import com.cyk.easy.pay.common.constants.R;
+import com.cyk.easy.pay.common.constants.ApiResponse;
 import com.cyk.easy.pay.merchant.api.IMchApiService;
 import com.cyk.easy.pay.merchant.api.model.MchAndAppInfoReq;
 import com.cyk.easy.pay.merchant.api.model.MchAndAppInfoResp;
@@ -24,13 +24,13 @@ public class MchApiService implements IMchApiService {
     private MchAppAggregateConverter converter;
 
     @Override
-    public R<MchAndAppInfoResp> queryMchAndAppInfo(MchAndAppInfoReq req) {
+    public ApiResponse<MchAndAppInfoResp> queryMchAndAppInfo(MchAndAppInfoReq req) {
         MchAppAggregate aggregate;
         try {
             aggregate = mchMgrService.queryMchAndAppInfo(req.getMchNo(), req.getAppId());
         } catch (Exception e) {
-            return R.fail(e.getMessage());
+            return ApiResponse.fail(e.getMessage());
         }
-        return R.success(converter.convert(aggregate));
+        return ApiResponse.success(converter.convert(aggregate));
     }
 }

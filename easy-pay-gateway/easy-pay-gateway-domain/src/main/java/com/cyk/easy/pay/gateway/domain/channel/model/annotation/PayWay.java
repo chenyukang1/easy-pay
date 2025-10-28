@@ -1,4 +1,4 @@
-package com.cyk.easy.pay.gateway.domain.channel.model.valobj;
+package com.cyk.easy.pay.gateway.domain.channel.model.annotation;
 
 
 import java.lang.annotation.Documented;

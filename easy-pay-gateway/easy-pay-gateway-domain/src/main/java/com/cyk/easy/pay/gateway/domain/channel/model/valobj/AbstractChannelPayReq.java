@@ -21,9 +21,19 @@ public abstract class AbstractChannelPayReq {
     private String appId;
 
     /**
-     * 商户订单号
+     * 是否特约商户
      **/
-    private String mchOrderNo;
+    private Boolean isvSubMch;
+
+    /**
+     * 特约商户支付渠道配置ID
+     **/
+    private Long isvSubConfigId;
+
+    /**
+     * 渠道配置ID
+     **/
+    private Long configId;
 
     /**
      * 支付订单号
@@ -49,16 +59,6 @@ public abstract class AbstractChannelPayReq {
      * 商品描述信息
      **/
     private String body;
-
-    /**
-     * 异步通知地址
-     **/
-    private String notifyUrl;
-
-    /**
-     * 跳转通知地址
-     **/
-    private String returnUrl;
 
     /**
      * 订单失效时间, 单位：秒

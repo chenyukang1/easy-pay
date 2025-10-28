@@ -4,7 +4,7 @@ package com.cyk.easy.pay.common.constants;
 /**
  * @author yukang.chen
  */
-public class R<T> {
+public class ApiResponse<T> {
 
     private int code;
 
@@ -12,19 +12,19 @@ public class R<T> {
 
     private T data;
 
-    public static <T> R<T> success(T data) {
-        R<T> r = new R<>();
-        r.setCode(200);
-        r.setMessage("success");
-        r.setData(data);
-        return r;
+    public static <T> ApiResponse<T> success(T data) {
+        ApiResponse<T> apiResponse = new ApiResponse<>();
+        apiResponse.setCode(200);
+        apiResponse.setMessage("success");
+        apiResponse.setData(data);
+        return apiResponse;
     }
 
-    public static <T> R<T> fail(String msg) {
-        R<T> r = new R<>();
-        r.setCode(500);
-        r.setMessage(msg);
-        return r;
+    public static <T> ApiResponse<T> fail(String msg) {
+        ApiResponse<T> apiResponse = new ApiResponse<>();
+        apiResponse.setCode(500);
+        apiResponse.setMessage(msg);
+        return apiResponse;
     }
 
     public boolean isSuccess() {

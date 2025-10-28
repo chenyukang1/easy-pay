@@ -1,4 +1,4 @@
-package com.cyk.easy.pay.routing.infrastructure;
+package com.cyk.easy.pay.gateway.infrastructure;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
@@ -15,15 +15,16 @@ import java.io.File;
 
 class CodeGenTest {
 
-    public static final String THIS_MODULE_NAME = "easy-pay-routing/easy-pay-routing-infrastructure"; //当前项目名称
+    public static final String THIS_MODULE_NAME = "easy-pay-gateway/easy-pay-gateway-infrastructure"; //当前项目名称
+    public static final String PACKAGE_ROOT = "com.cyk.easy.pay.gateway.infrastructure"; //当前项目根目录
 
-    public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/easy_pay?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8";
+    public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/gateway?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8";
     public static final String DB_USERNAME = "root";
     public static final String DB_PASSWORD = "root";
 
     // 多个用,  拼接
     //public static final String TABLE_NAMES= "t_sys_entitlement,t_sys_role,t_sys_user,t_sys_user_auth";
-    public static final String TABLE_NAMES= "t_payment_channel,t_routing_record,t_routing_rule";
+    public static final String TABLE_NAMES= "t_pay_way,t_pay_channel_info,t_pay_channel_config,t_mch_pay_channel_config,t_pay_channel_rate";
 
     public static void main(String[] args) {
         // 代码生成器
@@ -71,7 +72,7 @@ class CodeGenTest {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.cyk.easy.pay.routing.infrastructure");  //根目录
+        pc.setParent(PACKAGE_ROOT);  //根目录
         pc.setEntity("entity");   //实体目录
         pc.setMapper("mapper"); //Mapper接口目录
         pc.setXml("mapper.xml"); //xml目录
